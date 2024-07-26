@@ -2,24 +2,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     display: flex;
+    font-size: 1.2em;
     align-items: center;
     flex-direction: column;
 }
 
-#myButton {
-    font-size: 3em;
-    padding: 4px 40px;
-    background-color: cornflowerblue;
-    border-radius: 12px;
-    border-width: 0px;
-    transition: background-color 0.25s;
-    cursor: pointer;
-}
-#myButton:hover {
-    background-color: rgb(58, 119, 232);
-    
-}
-
-#myLabel {
-    font-size: 3em;
-}
