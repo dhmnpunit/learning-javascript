@@ -232,3 +232,73 @@ document.getElementById("mySubmit").onclick = function() {
 
 
 */
+
+
+
+
+
+
+
+
+
+/*  COUNTER PROGRAM
+
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
+let count = 0;
+
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/*  Math = built-in object that provides a  collection of properties and methods
+
+let x = 3;
+let y = 2;
+let z;
+let a = 1;
+
+// z = Math.round(x);
+// z = Math.floor(x);
+// z = Math.ceil(x);
+// z = Math.trunc(x);
+// z = Math.pow(x, y);
+// z = Math.sqrt(y);
+// z = Math.log(x);
+// z = Math.sin(x);
+// z = Math.cos(x);
+// z = Math.tan(x);
+// z = Math.abs(x);
+// z = Math.sign(x);
+// let max = Math.max(a, x, y);
+// let min = Math.min(a, x, y);
+
+
+
+console.log(min);
+
+
+*/
