@@ -1,9 +1,8 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    display: flex;
     font-size: 1.2em;
-    align-items: center;
-    flex-direction: column;
 }
 
+#mySubmit {
+    font-size: 1em;
+}
