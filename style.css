@@ -3,17 +3,3 @@ body {
     font-size: 1.2em;
 }
 
-#mySubmit {
-    color: white;
-    font-size: 1em;
-    background-color: cornflowerblue;
-    border-radius: 8px;
-    border-width: 0px;
-    padding: 4px 12px;
-    transition: background-color 0.25s;
-    cursor: pointer;
-}
-
-#mySubmit:hover {
-    background-color: rgb(62, 122, 234);
-}
