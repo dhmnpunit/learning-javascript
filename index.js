@@ -1,83 +1,58 @@
-/*  SWITCH
-    can be efficinet replacement to many else if statements 
+/*  STRING METHODS 
+    allow you to manipulate and work with text (strings)
 
 
 */
 
-let day = 5;
-
-without using switch 
-
-if(day == 1) {
-    console.log(`It is Monday`);
-} else if(day == 2) {
-    console.log(`It is Tuesday`);
-} else if(day == 3) {
-    console.log(`It is Wednesday`);
-} else if(day == 4) {
-    console.log(`It is Thursday`);
-} else if(day == 5) {
-    console.log(`It is Friday`);
-} else if(day == 6) {
-    console.log(`It is Saturday`);
-} else if(day == 7) {
-    console.log(`It is Sunday`);
-} else {
-    console.log(`${day} is not a day.`)
-}
 
 
+let userName = "PunitDhiman";
+let newName = "punit     ";
 
-with using switch
+// .charAt() 
+console.log(userName.charAt(5));
 
-switch (day) {
-    case 1:
-        console.log(`It is Monday`);
-        break;
-    case 2:
-        console.log(`It is Tuesday`);
-        break;
-    case 3:
-        console.log(`It is Wednesday`);
-        break;
-    case 4:
-        console.log(`It is Thursday`);
-        break;
-    case 5:
-        console.log(`It is Friday`);
-        break;
-    case 6:
-        console.log(`It is Saturday`);
-        break;
-    case 7:
-        console.log(`It is Sunday`);
-        break;
-    default:
-        console.log(`${day} is not a day`)
-        break;
-}
+// .indexOf() .lastIndexOf()
+console.log(userName.indexOf("i"));
+console.log(userName.lastIndexOf("i"));
+
+// .length()
+console.log(userName.length);
+
+// .trim()
+newName = newName.trim();
+console.log(newName);
+
+// .toUpperCase()
+console.log(userName.toUpperCase());
+
+// .toLowerCase()
+console.log(userName.toLowerCase());
+
+// .repeat()
+console.log(userName.repeat(3));
+
+// .startsWith()
+console.log(userName.startsWith("P"));
+
+// .endsWith()
+console.log(userName.endsWith("n"));
+
+// .includes()
+console.log(userName.includes("D"));
 
 
 
+let phoneNumber = "123-456-7890";
 
-let testScore = 34;
-let letterGrade;
+// .replaceAll()
+phoneNumber = phoneNumber.replaceAll("-", "/");
+console.log(phoneNumber);
 
-switch(true) {
-    case testScore >= 90:
-        letterGrade = "A";
-        break;
-    case testScore >= 80:
-        letterGrade = "B";
-        break;
-    case testScore >= 70:
-        letterGrade = "C";
-        break;
-    case testScore >= 60:
-        letterGrade = "D";
-        break;
-    default:
-        letterGrade = "F";
-}
+// .padStart()
+phoneNumber = phoneNumber.padStart(15, "0");
+console.log(phoneNumber);
 
-console.log(letterGrade);
+// .padEnd()
+phoneNumber = phoneNumber.padEnd(20, "0");
+console.log(phoneNumber);
