@@ -1,58 +1,28 @@
-/*  STRING METHODS 
-    allow you to manipulate and work with text (strings)
+/*  STRING SLICING 
+    creating a portion of another string 
+
+    string.slice(start, end)
 
 
 */
 
+const fullName = "Punit Dhiman"
 
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-1);
 
-let userName = "PunitDhiman";
-let newName = "punit     ";
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
 
-// .charAt() 
-console.log(userName.charAt(5));
-
-// .indexOf() .lastIndexOf()
-console.log(userName.indexOf("i"));
-console.log(userName.lastIndexOf("i"));
-
-// .length()
-console.log(userName.length);
-
-// .trim()
-newName = newName.trim();
-console.log(newName);
-
-// .toUpperCase()
-console.log(userName.toUpperCase());
-
-// .toLowerCase()
-console.log(userName.toLowerCase());
-
-// .repeat()
-console.log(userName.repeat(3));
-
-// .startsWith()
-console.log(userName.startsWith("P"));
-
-// .endsWith()
-console.log(userName.endsWith("n"));
-
-// .includes()
-console.log(userName.includes("D"));
+console.log(firstName);
+console.log(lastName);
 
 
 
-let phoneNumber = "123-456-7890";
+const email = "punit1@gmail.com";
 
-// .replaceAll()
-phoneNumber = phoneNumber.replaceAll("-", "/");
-console.log(phoneNumber);
+let userName = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") + 1);
 
-// .padStart()
-phoneNumber = phoneNumber.padStart(15, "0");
-console.log(phoneNumber);
-
-// .padEnd()
-phoneNumber = phoneNumber.padEnd(20, "0");
-console.log(phoneNumber);
+console.log(userName);
+console.log(extension);
