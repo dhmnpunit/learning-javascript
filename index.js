@@ -1,67 +1,18 @@
-/*  FUNCTION
-    a section of reusable code
-    declare code once, use it whenever you want.
-    call the function to execute that code.
-
-
+/*  VARIABLE SCOPE 
+    where a variable is recognized 
+    and accessible (local and global)
 
 */
 
-// these are parameters
-function happyBirthday(userName, age) {
-    console.log("Happy Birthday to you!");
-    console.log("Happy Birthday to you!");
-    console.log(`Happy Birthday dear ${userName}!`);
-    console.log("Happy Birthday to you!");
-    console.log(`You are ${age} years old`);
-    
+// we have 2 variable with the same name in the program , that's legal as long as they have different scopes 
+// any variable declared inside of a function is a local scope 
+
+function function1() {
+    let x = 1;
+    console.log(x);
 }
 
-
-// (_,_) these are known as arguments, they are data that you send to a function
-happyBirthday("Punit", 18); 
-happyBirthday("Spongebob" , 30);
-happyBirthday("patrick", 37);
-
-
-
-function add(x, y) {
-    return x + y;
+function function2() {
+    let x = 2;
+    console.log(x);
 }
-
-function subtract(x, y) {
-    return x - y;
-}
-
-
-function isEven(number) {
-
-    if(number % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-
-function isEmailValid(email) {
-
-    if(email.includes("@")) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-// OR ------- TERNARY OPERATOR --------
-
-function isValidEmail(email) {
-    return email.includes("@") ? true : false;
-}
-
-
-console.log(subtract(4,3));
-console.log(add(3,4));
-console.log(isEven(13));
-console.log(isEmailValid("Punit@fake.com"));
-console.log(isValidEmail("Punit@Fake.com"));
