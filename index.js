@@ -1,31 +1,40 @@
-/*  LOGICAL OPERATORS
-    used to combine or manipulate boolean values
-    (true or false)
+/*  FIXME: STRICT EQUALITY
 
-    AND = &&
-    OR = ||
-    NOT = !
+    = assignment operator
+   == comparison operator (compare if values are equal)
+  === strict equality operator (compare if values & datatype are equal)
+   != inequality operator
+  !== strict inequality operator
+
 
 */
 
-const temp = 24;
+const PI = 3.14;
 
-if(temp > 0 && temp <= 30) {
-    console.log("The weather is GOOD!")
+// TODO:
+if(PI == "3.14") {
+    console.log("That is Pi");
 } else {
-    console.log("The weather is BAD!")
+    console.log("That is not Pi");
 }
 
-if(temp > 0 || temp <= 30) {
-    console.log("The weather is GOOD!")
+// TODO:
+if(PI === "3.14") {
+    console.log("That is Pi");
 } else {
-    console.log("The weather is BAD!")
+    console.log("That is not Pi");
 }
 
-const isSunny =  false;
-
-if(!isSunny) {
-    console.log("It is CLOUDY");
+// TODO:
+if(PI != "3.14") {
+    console.log("That is not Pi");
 } else {
-    console.log("It is SUNNY");
+    console.log("That is Pi");
+}
+
+// TODO:
+if(PI !== "3.14") {
+    console.log("That is not Pi");
+} else {
+    console.log("That is Pi");
 }
