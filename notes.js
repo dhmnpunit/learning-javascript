@@ -1,4 +1,4 @@
-/*  BASICS
+/*  FIXME: BASICS
 
 console.log(`Hello`);
 console.log(`i like pizza`);
@@ -22,7 +22,7 @@ document.getElementById("myP").textContent = `I like pizza!`;
 
 
 
-/*  VARIABLES 
+/*  FIXME: VARIABLES 
 
 variable = a container that stores a value.
            behaves as if it were the value it contains.
@@ -90,7 +90,7 @@ document.getElementById("p3").textContent = `Enrolled: ${isStudent}`;
 
 
 
-/* ARITHEMATIC OPERATORS
+/* FIXME: ARITHEMATIC OPERATORS
 
 arithematic operatoes = operands (values, variables, etc.)
                         operators (+ - * /)
@@ -146,7 +146,7 @@ console.log(result);
 
 
 
-/*  HOW TO ACCEPT USER INPUT
+/*  FIXME: HOW TO ACCEPT USER INPUT
     
     1. EASY WAY = window prompt
     2. PROFESSIOL WAY = HTML textbox
@@ -177,7 +177,7 @@ console.log(result);
 
 
 
-/*  TYPE CONVERSION
+/*  FIXME: TYPE CONVERSION
 
 type conversion = change the datatype pf a value to another
                   (stings, numbers, booleans)
@@ -213,7 +213,7 @@ git
 
 
 
-/*  CONSTANTS
+/*  FIXME: CONSTANTS
 
 const = a variable that can't be changed 
 
@@ -241,7 +241,7 @@ document.getElementById("mySubmit").onclick = function() {
 
 
 
-/*  COUNTER PROGRAM
+/*  FIXME: COUNTER PROGRAM
 
 const decreaseBtn = document.getElementById("decreaseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -274,7 +274,7 @@ resetBtn.onclick = function() {
 
 
 
-/*  Math = built-in object that provides a  collection of properties and methods
+/*  FIXME: Math = built-in object that provides a  collection of properties and methods
 
 let x = 3;
 let y = 2;
@@ -311,7 +311,7 @@ console.log(min);
 
 
 
-/*  RANDOM NUMBER GENERATOR 
+/*  FIXME: RANDOM NUMBER GENERATOR 
 
 const myButton = document.getElementById("myButton");
 const myLabel = document.getElementById("myLabel");
@@ -339,7 +339,7 @@ console.log(randomNum);
 
 
 
-/*  IF STATEMENTS 
+/*  FIXME: IF STATEMENTS 
     if a condition is true, execute some code
     if not, do something else 
 
@@ -414,7 +414,7 @@ mySubmit.onclick = function() {
 
 
 
-/*  CHECKED PROPERTY
+/*  FIXME: CHECKED PROPERTY
     - property that determines the checked state of an HTML checkbox or radio button element
 
 const myCheckbox = document.getElementById("myCheckbox");
@@ -455,7 +455,7 @@ mySubmit.onclick = function() {
 
 
 
-/*  TERNARY OPERATOR 
+/*  FIXME: TERNARY OPERATOR 
   - a shortcut to if{} and else{} statements
     helps to assign a variable based on a condition
     condition? codeIfTrue : codeIfFalse;
@@ -493,7 +493,7 @@ console.log(`Your total is $${purchaseAmount - (purchaseAmount * (discount/100))
 
 
 
-/*  SWITCH
+/*  FIXME: SWITCH
     can be efficinet replacement to many else if statements 
 
 let day = 5;
@@ -586,61 +586,96 @@ console.log(letterGrade);
 
 
 
-/*  STRING METHODS 
+/*  FIXME: STRING METHODS 
     allow you to manipulate and work with text (strings)
 
 let userName = "PunitDhiman";
 let newName = "punit     ";
 
-// .charAt() 
+// TODO: .charAt() 
 console.log(userName.charAt(5));
 
-// .indexOf() .lastIndexOf()
+// TODO: .indexOf() .lastIndexOf()
 console.log(userName.indexOf("i"));
 console.log(userName.lastIndexOf("i"));
 
-// .length()
+// TODO: .length()
 console.log(userName.length);
 
-// .trim()
+// TODO: .trim()
 newName = newName.trim();
 console.log(newName);
 
-// .toUpperCase()
+// TODO: .toUpperCase()
 console.log(userName.toUpperCase());
 
-// .toLowerCase()
+// TODO: .toLowerCase()
 console.log(userName.toLowerCase());
 
-// .repeat()
+// TODO: .repeat()
 console.log(userName.repeat(3));
 
-// .startsWith()
+// TODO: .startsWith()
 console.log(userName.startsWith("P"));
 
-// .endsWith()
+// TODO: .endsWith()
 console.log(userName.endsWith("n"));
 
-// .includes()
+// TODO: .includes()
 console.log(userName.includes("D"));
 
 
 
 let phoneNumber = "123-456-7890";
 
-// .replaceAll()
+// TODO: .replaceAll()
 phoneNumber = phoneNumber.replaceAll("-", "/");
 console.log(phoneNumber);
 
-// .padStart()
+// TODO: .padStart()
 phoneNumber = phoneNumber.padStart(15, "0");
 console.log(phoneNumber);
 
-// .padEnd()
+// TODO: .padEnd()
 phoneNumber = phoneNumber.padEnd(20, "0");
 console.log(phoneNumber);
 
 */
 
 
+
+
+
+
+
+
+
+/*  FIXME: STRING SLICING 
+    creating a portion of another string 
+
+    string.slice(start, end)
+
+const fullName = "Punit Dhiman"
+
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-1);
+
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+
+console.log(firstName);
+console.log(lastName);
+
+
+
+const email = "punit1@gmail.com";
+
+let userName = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") + 1);
+
+console.log(userName);
+console.log(extension);
+
+
+*/
 
