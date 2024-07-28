@@ -1,34 +1,19 @@
-/*  WHILE LOOP 
-    repeat some code WHILE some condition is true
+/*  FOR LOOP
+    repeat some code a LIMITED amount of time
+
+
 
 
 
 */
 
+for(let i = 0; i <=20; i++) {
 
-let userName = "";
-
-while(userName === "" || null) {
-    userName = window.prompt(`Enter your name`);
-
-}
-
-console.log(`Hello ${userName}`);
-
-
-
-let loggedIn = false;
-let userName;
-let password;
-
-while(!loggedIn) {
-    userName = window.prompt(`Enter your username`)
-    password = window.prompt(`Enter your password`)
-
-    if(userName === "myUsername" && password === "myPassword") {
-        loggedIn = true;
-        console.log("you are logged in!");
+    if(i == 13) {
+        continue;  // to skip an iteration
     } else {
-        console.log("invalid credentials! Please try again!");
+        console.log(i);
+
     }
+
 }
