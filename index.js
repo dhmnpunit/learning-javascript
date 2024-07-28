@@ -1,28 +1,31 @@
-/*  FIXME: METHOD CHAINING 
-    calling one method after another
-    in one continuous line of code.
+/*  LOGICAL OPERATORS
+    used to combine or manipulate boolean values
+    (true or false)
 
-
+    AND = &&
+    OR = ||
+    NOT = !
 
 */
 
-let userName = window.prompt("Enter your username:");
+const temp = 24;
 
+if(temp > 0 && temp <= 30) {
+    console.log("The weather is GOOD!")
+} else {
+    console.log("The weather is BAD!")
+}
 
-// TODO: ----- NO METHOD CHAINING ------
+if(temp > 0 || temp <= 30) {
+    console.log("The weather is GOOD!")
+} else {
+    console.log("The weather is BAD!")
+}
 
-userName = userName.trim();
+const isSunny =  false;
 
-let letter = userName.charAt(0);
-letter = letter.toUpperCase();
-
-let extraChar = userName.slice(1);
-extraChar = extraChar.toLowerCase();
-
-userName = letter + extraChar;
-console.log(userName); 
-
-// TODO: ----- METHOD CHAINING ------
-
-userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
-console.log(userName)
+if(!isSunny) {
+    console.log("It is CLOUDY");
+} else {
+    console.log("It is SUNNY");
+}
