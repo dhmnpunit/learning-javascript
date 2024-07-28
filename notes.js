@@ -814,7 +814,7 @@ if(PI !== "3.14") {
 
 
 
-/*  WHILE LOOP 
+/*  FIXME: WHILE LOOP 
     repeat some code WHILE some condition is true
 
 let userName = "";
@@ -856,7 +856,7 @@ while(!loggedIn) {
 
 
 
-/*  FOR LOOP
+/*  FIXME: FOR LOOP
     repeat some code a LIMITED amount of time
 
 for(let i = 0; i <=20; i++) {
@@ -883,7 +883,7 @@ for(let i = 0; i <=20; i++) {
 
 
 
-/*  NUMBER GUESSING GAME
+/*  FIXME: NUMBER GUESSING GAME
 
 const minNum = 1;
 const maxNum = 100;
@@ -929,7 +929,7 @@ while(running) {
 
 
 
-/*  FUNCTION
+/*  FIXME: FUNCTION
     a section of reusable code
     declare code once, use it whenever you want.
     call the function to execute that code.
@@ -992,6 +992,34 @@ console.log(add(3,4));
 console.log(isEven(13));
 console.log(isEmailValid("Punit@fake.com"));
 console.log(isValidEmail("Punit@Fake.com"));
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*  FIXME: VARIABLE SCOPE 
+    where a variable is recognized 
+    and accessible (local and global)
+
+// we have 2 variable with the same name in the program , that's legal as long as they have different scopes 
+// any variable declared inside of a function is a local scope 
+
+function function1() {
+    let x = 1;
+    console.log(x);
+}
+
+function function2() {
+    let x = 2;
+    console.log(x);
+}
 
 */
 
