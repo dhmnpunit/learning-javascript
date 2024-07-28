@@ -1,37 +1,67 @@
-/*  NUMBER GUESSING GAME
+/*  FUNCTION
+    a section of reusable code
+    declare code once, use it whenever you want.
+    call the function to execute that code.
+
 
 
 */
 
-const minNum = 1;
-const maxNum = 100;
-
-const answer = Math.floor(Math.random() * (maxNum - minNum + 1));
-
-let attempts = 0;
-let guess;
-let running = true;
-
-while(running) {
-
-    guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}`);
-    guess = Number(guess);
-
-    if(isNaN(guess)) {
-        window.alert("Please enter a valid number");
-    } else if(guess < minNum || guess > maxNum) {
-        window.alert("Please enter a valid number");
-    } else {
-        attempts++;
-        if(guess < answer) {
-            window.alert("TOO LOW! TRY AGAIN!")
-        } else if(guess > answer) {
-            window.alert("TOO HIGH! TRY AGAIN!")
-        } else {
-            window.alert(`CORRECT! The answer was ${answer}. It took you ${attempts} attempts.`)
-            running = false;
-        }
-    }
-
-   
+// these are parameters
+function happyBirthday(userName, age) {
+    console.log("Happy Birthday to you!");
+    console.log("Happy Birthday to you!");
+    console.log(`Happy Birthday dear ${userName}!`);
+    console.log("Happy Birthday to you!");
+    console.log(`You are ${age} years old`);
+    
 }
+
+
+// (_,_) these are known as arguments, they are data that you send to a function
+happyBirthday("Punit", 18); 
+happyBirthday("Spongebob" , 30);
+happyBirthday("patrick", 37);
+
+
+
+function add(x, y) {
+    return x + y;
+}
+
+function subtract(x, y) {
+    return x - y;
+}
+
+
+function isEven(number) {
+
+    if(number % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+function isEmailValid(email) {
+
+    if(email.includes("@")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// OR ------- TERNARY OPERATOR --------
+
+function isValidEmail(email) {
+    return email.includes("@") ? true : false;
+}
+
+
+console.log(subtract(4,3));
+console.log(add(3,4));
+console.log(isEven(13));
+console.log(isEmailValid("Punit@fake.com"));
+console.log(isValidEmail("Punit@Fake.com"));
