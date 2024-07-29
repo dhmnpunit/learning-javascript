@@ -1,5 +1,48 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
 }
 
+#container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    background-color: cornflowerblue;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s ease-out;
+}
+
+button:hover {
+    background-color: rgb(61, 123, 237);
+}
+
+button:active {
+    background-color: cornflowerblue;
+}
+
+input {
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#diceResult {
+    margin: 24px;
+}
+
+img {
+    width: 180px;
+    height: auto;
+    margin: 12px;
+    background-color: transparent;
+
+}
