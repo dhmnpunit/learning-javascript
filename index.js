@@ -1,44 +1,34 @@
-/*  CALLBACKS
-    a function that is passed as an argument
+/*  forEach()
+    method used to iterate over the elements
+    of an array and apply a specified function (callback)
+    to each element
 
-    used to handle asynchronous operations:
-    1. Reading a file
-    2. Network requests
-    3. Interacting with databases
-
-    "Hey, when you're done,  call this next."
+    array.forEach(callback);
+    element, index, array are provided
 
 
  */
 
-sum(displayPage, 1, 2);
+let fruits = ["apple", "orange", "banana", "coconut"];
 
-function hello(callback) {
-    console.log("Hello!");
-    callback();
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function capitalize(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
 }
 
-function wait() {
-    console.log("Wait!");
+function lowerCase(element, index, array) {
+    array[index] = element.toLowerCase();
 }
 
-function leave() {
-    console.log("leave!");
+function upperCase(element, index, array) {
+    array[index] = element.toUpperCase();
 }
 
-function goodbye() {
-    console.log("Goodbye!");
+function display(element) {
+    console.log(element);
 }
 
-function sum(callback, x, y) {
-    let result = x + y;
-    callback(result);
-}
 
-function displayConsole(result) {
-    console.log(result);
-}
 
-function displayPage(result) {
-    document.getElementById("myH1").textContent = result;
-}
