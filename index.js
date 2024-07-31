@@ -1,61 +1,37 @@
-/*  .filter()
-    creates a new array by filtering out elements
+/*  .reduce()
+    reduce the elements of an array to a single value
 
 
  */
 
-// TODO:
-let numbers = [1, 2, 3, 4, 5, 6, 7];
-let evenNums = numbers.filter(isEven);
-let oddNums = numbers.filter(isOdd);
+//  TODO:
+const prices = [5, 30, 10 , 25, 15, 20];
+const total = prices.reduce(sum);
 
-console.log(evenNums);
-console.log(oddNums);
+console.log(`$${total}`)
 
-function isEven(element) {
-    return element % 2 === 0;
-}
+// accumulator = previous element
+// element = next element
 
-function isOdd(element) {
-    return element % 2 !== 0;
+function sum(accumulator, element) {
+    return accumulator + element;
 }
 
 
 
 
 //  TODO:
-const ages = [16, 17, 18, 18, 19, 20, 60];
-const adults = ages.filter(isAdult);
-const children = ages.filter(isChildren);
+const grades = [75, 50, 90, 80, 65, 95];
+const maximum = grades.reduce(getMax);
+const minimum = grades.reduce(getMin);
 
-console.log(ages);
-console.log(adults);
-console.log(children);
+console.log(maximum);
+console.log(minimum);
 
-
-function isAdult(element) {
-    return element >= 18;
+function getMax(accumulator, element) {
+    return Math.max(accumulator, element);
 }
 
-function isChildren(element) {
-    return element <18;
-}
-
-
-
-
-//  TODO:
-const words = ["apple", "orange", "banana", "kiwi", "pomegranate", "coconut"]
-const shortWords = words.filter(getShortWords);
-const LongWords = words.filter(getLongWords);
-
-console.log(shortWords);
-console.log(LongWords);
-
-function getShortWords(element) {
-    return element.length <= 6;
-}
-
-function getLongWords(element) {
-    return element.length > 6;
+function getMin(accumulator, element) {
+    return Math.min(accumulator, element);
 }
