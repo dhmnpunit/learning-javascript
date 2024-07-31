@@ -1,41 +1,34 @@
-/*  FIXME: OBJECT
-    a collection of related properties and/or methods
-    can represent real world injects (people, products, places)
-    object = {key: value
-              function()}
+/*  THIS
+    reference to the object where THIS is used
+    (the object depends on the immediate context)
+    person.name = this.name
 
 
  */
 
-//  TODO:
 const person1 = {
-    firstName: "Spongebob",
-    lastName: "Squarepants",
-    age: 30,
-    isEmployed: true,
+    name: "Punit",
+    favFood: "Pizza",
     sayHello: function () {
-        console.log(`Hi! I am ${person1.firstName} ${person1.lastName}`);
+        console.log(`Hi! I am ${this.name} and i like ${this.favFood}.`);
     },
-    eat: () => console.log(`${person1.firstName} is eating a Krabby Patty`)
+    eat: function () {
+        console.log(`${this.name} is eating ${this.favFood}.`);
+    }
 }
 
 const person2 = {
-    firstName: "Patrick",
-    lastName: "Star",
-    age: 42,
-    isEmployed: false,
+    name: "Prince",
+    favFood: "Burgers",
     sayHello: function () {
-        console.log(`Hi! I am ${person2.firstName} ${person2.lastName}`)
+        console.log(`Hi! I am ${this.name} and i like ${this.favFood}.`);
     },
-    sayNamaste: () => console.log(`Namaste! I am ${person2.firstName} ${person2.lastName}`),
+    eat: function () {
+        console.log(`${this.name} is eating ${this.favFood}.`);
+    }
 }
 
-console.log(`${person1.firstName} ${person1.lastName} is ${person1.age} years old.`);
-console.log(person2.firstName);
-console.log(person2.lastName);
-console.log(person2.age);
-console.log(person2.isEmployed);
 person1.sayHello();
-person2.sayHello();
-person2.sayNamaste();
 person1.eat();
+person2.sayHello();
+person2.eat();
