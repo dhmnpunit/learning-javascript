@@ -1,34 +1,34 @@
-/*  THIS
-    reference to the object where THIS is used
-    (the object depends on the immediate context)
-    person.name = this.name
+/*  CONSTRUCTOR
+    special method for defining the properties of objects
 
 
  */
 
-const person1 = {
-    name: "Punit",
-    favFood: "Pizza",
-    sayHello: function () {
-        console.log(`Hi! I am ${this.name} and i like ${this.favFood}.`);
-    },
-    eat: function () {
-        console.log(`${this.name} is eating ${this.favFood}.`);
+function Car(make, model, year, color) {
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color
+    this.drive = function() {
+        console.log(`You drive the ${this.model}`);
     }
 }
 
-const person2 = {
-    name: "Prince",
-    favFood: "Burgers",
-    sayHello: function () {
-        console.log(`Hi! I am ${this.name} and i like ${this.favFood}.`);
-    },
-    eat: function () {
-        console.log(`${this.name} is eating ${this.favFood}.`);
-    }
-}
+const car1 = new Car("Ford", "Mustang", 2024, "red");
+const car2 = new Car("Chevrolet", "Camaro", 2024, "blue");
 
-person1.sayHello();
-person1.eat();
-person2.sayHello();
-person2.eat();
+console.log(car1);
+console.log(car2);
+
+console.log(car1.make);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car1.color);
+
+console.log(car2.make);
+console.log(car2.model);
+console.log(car2.year);
+console.log(car2.color);
+
+car1.drive();
+car2.drive();
