@@ -1,62 +1,62 @@
-/*  FIXME: static
-    keyword that defines properties or methods that belong
-    to a class itself rather than the object created
-    from the class (class owns anything static, not the objects)
+/*  INHERITANCE
+    allows a new class to inherit the properties and methods of an existing class
+    the new class is called a subclass or derived class
+    the existing class is called a superclass or base class
+
+    (parent -> child)
+
+    helps with code reusability
 
 
  */
 
-// TODO:
-class MathUtil {
-    static PI = 3.14159;
+class Animal {
+    alive = true;
 
-    static getDiameter(radius) {
-        return radius * 2;
+    eat() {
+        console.log(`${this.name} is eating`);
     }
-
-    static getCircumference(radius) {
-        return 2 * this.PI * radius;
-    }
-
-    static getArea(radius) {
-        return this.PI * radius * radius;
+    sleep() {
+        console.log(`${this.name} is sleeping`);
     }
 }
 
-console.log(MathUtil.PI); // 3.14159
-console.log(MathUtil.getDiameter(10)); // 20
-console.log(MathUtil.getCircumference(10)); // 62.8318
-console.log(MathUtil.getArea(10)); // 314.159
+class Rabbit extends Animal {
+    name = 'Rabbit';
 
-
-
-
-// TODO:
-class User{
-    static userCount = 0;
-
-    constructor(username){
-        this.username = username;
-        User.userCount++;
+    run() {
+        console.log(`This ${this.name} is running`);
     }
-
-    static getUserCount(){
-        console.log(`Total users: ${User.userCount}`);
-    }
-
-    sayHello() {
-        console.log(`Hello, I'm ${this.username}`);
-    }
-
 }
 
-const user1 = new User('Punit');
-const user2 = new User('Prince');
-const user3 = new User('Raj');
+class Fish extends Animal {
+    name = 'Fish';
 
+    swim() {
+        console.log(`This ${this.name} is swimming`);
+    }
+}
 
-user1.sayHello(); // Hello, I'm Punit
-user2.sayHello(); // Hello, I'm Prince
-user3.sayHello(); // Hello, I'm Raj
+class Hawk extends Animal {
+    name = 'Hawk';
 
-User.getUserCount(); // Total users: 3
+    fly() {
+        console.log(`This ${this.name} is flying`);
+    }
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+console.log(rabbit.alive);
+fish.sleep();
+hawk.eat();
+
+rabbit.alive = false;
+console.log(rabbit.alive);
+
+rabbit.run();
+fish.swim();
+hawk.fly();
+//fish.run(); // error
