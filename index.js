@@ -1,64 +1,41 @@
-/*  ARROW FUNCTIONS
-    a concise way to write function expressions
-    good for simple functions that you use only once
-    (parameters) => some code
+/*  FIXME: OBJECT
+    a collection of related properties and/or methods
+    can represent real world injects (people, products, places)
+    object = {key: value
+              function()}
 
 
  */
 
-// TODO: this is a declared function
-function hello() {
-    console.log("Hello");
-}
-hello();
-
-
-// TODO: function expressions
-const hello1 = function () {
-    console.log("Hello");
-}
-
-// TODO: concise way to write it: Array function
-const hello2 = (name, age) => {
-    console.log(`Hello ${name}`);
-    console.log(`You are ${age} years old`);
-};
-hello2("Punit", 17);
-
-
-
-
-
-
-// TODO: declared function
-setTimeout(hello3, 3000);
-
-function hello3() {
-    console.log("Hello")
+//  TODO:
+const person1 = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
+    sayHello: function () {
+        console.log(`Hi! I am ${person1.firstName} ${person1.lastName}`);
+    },
+    eat: () => console.log(`${person1.firstName} is eating a Krabby Patty`)
 }
 
-// TODO: function expression
-setTimeout(function() {
-    console.log("Hello");
-}, 4000);
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed: false,
+    sayHello: function () {
+        console.log(`Hi! I am ${person2.firstName} ${person2.lastName}`)
+    },
+    sayNamaste: () => console.log(`Namaste! I am ${person2.firstName} ${person2.lastName}`),
+}
 
-// TODO: arrow
-setTimeout( () => console.log("Hello") , 5000 );
-
-
-
-
-// TODO:
-const numbers = [1, 2, 3, 4, 5, 6];
-
-const squares = numbers.map( (element) => Math.pow(element, 2) );
-const cubes = numbers.map( (element) => Math.pow(element, 3));
-const evenNums = numbers.filter( (element) => element % 2 === 0);
-const oddNums = numbers.filter( (element) => element % 2 !== 0);
-const total = numbers.reduce( (accumulator, element) => accumulator + element);
-
-console.log(squares);
-console.log(cubes);
-console.log(evenNums);
-console.log(oddNums);
-console.log(total);
+console.log(`${person1.firstName} ${person1.lastName} is ${person1.age} years old.`);
+console.log(person2.firstName);
+console.log(person2.lastName);
+console.log(person2.age);
+console.log(person2.isEmployed);
+person1.sayHello();
+person2.sayHello();
+person2.sayNamaste();
+person1.eat();
