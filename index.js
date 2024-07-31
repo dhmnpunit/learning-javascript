@@ -1,38 +1,62 @@
-/*  CLASSES
-    (ES6 feature) provides a more structured and cleaner way to
-    work with objects compared to traditional constructor functions
-    ex. static keyword
+/*  FIXME: static
+    keyword that defines properties or methods that belong
+    to a class itself rather than the object created
+    from the class (class owns anything static, not the objects)
+
 
  */
 
-class Product {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
+// TODO:
+class MathUtil {
+    static PI = 3.14159;
+
+    static getDiameter(radius) {
+        return radius * 2;
     }
 
-    displayProduct() {
-        console.log(`Product: ${this.name}` );
-        console.log(`Price: ₹${this.price.toFixed()}`);
+    static getCircumference(radius) {
+        return 2 * this.PI * radius;
     }
 
-    calculateTotal(salesTax) {
-        return this.price + (this.price * salesTax);
+    static getArea(radius) {
+        return this.PI * radius * radius;
     }
 }
 
-const salesTax = 0.05;
+console.log(MathUtil.PI); // 3.14159
+console.log(MathUtil.getDiameter(10)); // 20
+console.log(MathUtil.getCircumference(10)); // 62.8318
+console.log(MathUtil.getArea(10)); // 314.159
 
-const product1 = new Product("Shirt", 1999);
-const product2 = new Product("Pants", 2599);
-const product3 = new Product("Underwear", 700);
-const total = product1.calculateTotal(salesTax);
-const total2 = product2.calculateTotal(salesTax);
-const total3 = product3.calculateTotal(salesTax);
 
-product1.displayProduct();
-product2.displayProduct();
-product3.displayProduct();
-console.log(`Total price (including tax) ₹${total.toFixed(2)}`);
-console.log(`Total price (including tax ₹${total2.toFixed(2)})`);
-console.log(`Total price (including tax ₹${total3.toFixed(2)})`);
+
+
+// TODO:
+class User{
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+
+    static getUserCount(){
+        console.log(`Total users: ${User.userCount}`);
+    }
+
+    sayHello() {
+        console.log(`Hello, I'm ${this.username}`);
+    }
+
+}
+
+const user1 = new User('Punit');
+const user2 = new User('Prince');
+const user3 = new User('Raj');
+
+
+user1.sayHello(); // Hello, I'm Punit
+user2.sayHello(); // Hello, I'm Prince
+user3.sayHello(); // Hello, I'm Raj
+
+User.getUserCount(); // Total users: 3
