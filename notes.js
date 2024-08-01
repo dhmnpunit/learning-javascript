@@ -2051,3 +2051,78 @@ User.getUserCount(); // Total users: 3
 
  */
 
+
+
+
+
+
+
+
+
+
+/*  FIXME: INHERITANCE
+    allows a new class to inherit the properties and methods of an existing class
+    the new class is called a subclass or derived class
+    the existing class is called a superclass or base class
+
+    (parent -> child)
+
+    helps with code reusability
+
+// TODO:
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+    sleep() {
+        console.log(`${this.name} is sleeping`);
+    }
+}
+
+// TODO:
+class Rabbit extends Animal {
+    name = 'Rabbit';
+
+    run() {
+        console.log(`This ${this.name} is running`);
+    }
+}
+
+// TODO:
+class Fish extends Animal {
+    name = 'Fish';
+
+    swim() {
+        console.log(`This ${this.name} is swimming`);
+    }
+}
+
+// TODO:
+class Hawk extends Animal {
+    name = 'Hawk';
+
+    fly() {
+        console.log(`This ${this.name} is flying`);
+    }
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+console.log(rabbit.alive);
+fish.sleep();
+hawk.eat();
+
+rabbit.alive = false;
+console.log(rabbit.alive);
+
+rabbit.run();
+fish.swim();
+hawk.fly();
+//fish.run(); // error
+
+ */
+
